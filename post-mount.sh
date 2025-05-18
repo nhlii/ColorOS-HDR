@@ -1,0 +1,17 @@
+#!/system/bin/sh
+MODDIR=${0%/*}  # 自动获取模块目录路径
+
+# 原始文件路径
+ORIGINAL="/system/my_product/vendor/etc/multimedia_display_feature_config.xml"
+
+# OverlayFS参数设置
+TARGET="/system/my_product/vendor/etc/multimedia_display_feature_config.xml"  # 要覆盖的目标文件
+UPPER="$MODDIR/system/my_product/vendor/etc/multimedia_display_feature_config.xml"  # 你的修改版文件
+WORK="$MODDIR/work"  # OverlayFS工作目录
+
+# 创建必要目录
+mkdir -p $(dirname $TARGET)  # 确保目标路径存在
+mkdir -p $(dirname $UPPER) $WORK
+
+# 挂载OverlayFS
+mount -t overlay overlay -o lowerdir=$ORIGINAL,upperdir=$UPPER,workdir=$WORK $TARGET

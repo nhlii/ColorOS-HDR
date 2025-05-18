@@ -1,0 +1,6 @@
+id=coloros_hdr_unlock
+name=ColorOS解锁HDR
+version=v0.10
+versionCode=1
+author=白鸟白鸟
+description=ColorOS存在HDR、杜比视界白名单机制，非白名单内App无法开启HDR、杜比视界等功能。本模块用于将有相关需要的App添加到白名单中。

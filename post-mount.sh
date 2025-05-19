@@ -5,7 +5,7 @@ MODDIR=${0%/*}
 TARGET="/system/my_product/vendor/etc"    # 要覆盖的目录
 LOWER="/system/my_product/vendor/etc"     # 原系统目录
 UPPER="$MODDIR/system/my_product/vendor/etc"  # 你的修改文件所在目录
-WORK="$MODDIR/work"                       # 临时工作目录
+WORK="$MODDIR/system/my_product/vendor/work"  # 临时工作目录
 
 # 创建必要目录
 mkdir -p "$TARGET" "$UPPER" "$WORK"

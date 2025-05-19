@@ -11,4 +11,4 @@ WORK="$MODDIR/system/my_product/vendor/work"  # 临时工作目录
 mkdir -p "$TARGET" "$UPPER" "$WORK"
 
 # 挂载OverlayFS（合并原目录和你的修改）
-mount -t overlay overlay -o lowerdir="$LOWER",upperdir="$UPPER",workdir="$WORK" "$TARGET"
+mount -t overlay KSU -o lowerdir="$LOWER",upperdir="$UPPER",workdir="$WORK" "$TARGET"

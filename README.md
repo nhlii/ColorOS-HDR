@@ -1,0 +1,1 @@
+将有需要的App添加到ColorOS的HDR、杜比视界白名单中。仅适用于使用OverlayFS作为挂载方式的Root管理器（原版KernelSU等）。

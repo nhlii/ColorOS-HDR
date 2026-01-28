@@ -12,5 +12,10 @@ mkdir -p "$UPPER_CHU" "$WORK_CHU"
 rm -rf "$WORK_CHU"/*
 rm -rf "$WORK_CHU"/.[!.]* "$WORK_CHU"/..?* 2>/dev/null
 
+# 确保目标文件权限
+[ -f "$UPPER_CHU/$NAME" ] || exit 1
+chmod 0644 "$UPPER_CHU/$NAME"
+chown 0:0 "$UPPER_CHU/$NAME"
+
 # 挂载OverlayFS
 mount -t overlay overlay -o lowerdir="$LOWER_CHU",upperdir="$UPPER_CHU",workdir="$WORK_CHU" "$TARGET_CHU"

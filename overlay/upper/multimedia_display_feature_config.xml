@@ -35,6 +35,10 @@
         </feature>
 
         <feature name="HdrGeneric" enable="1">
+            <supportApp>com.mountains.hills</supportApp>
+            <supportApp>com.hush.yamby</supportApp>
+            <supportApp>com.oumi.utility.media.hub</supportApp>
+            <supportApp>com.attempt.afusekt</supportApp>
             <supportApp>com.sina.weibo</supportApp>
             <supportApp>com.sina.weibo.image</supportApp>
             <supportApp>tv.danmaku.bili</supportApp>

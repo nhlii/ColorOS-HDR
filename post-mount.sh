@@ -13,7 +13,7 @@ mkdir -p "$UPPER_CHU" "$WORK_CHU"
 rm -rf "$WORK_CHU"/*
 rm -rf "$WORK_CHU"/.[!.]* "$WORK_CHU"/..?* 2>/dev/null
 
-# 等待/my_product挂载
+# 等待/my_product/vendor/etc/multimedia_display_feature_config.xml挂载
 timeout=30
 while [ $timeout -gt 0 ] && [ ! -f "$LOWER_CHU/$NAME" ]; do
   sleep 1

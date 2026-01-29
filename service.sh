@@ -34,7 +34,7 @@ fi
 chmod 0644 "$UPPER_CHU/$NAME"
 chown 0:0 "$UPPER_CHU/$NAME"
 
-# 对齐 SELinux label
+# 对齐SELinux label
 if command -v chcon >/dev/null 2>&1 && [ -f "$LOWER_CHU/$NAME" ]; then
   chcon --reference="$LOWER_CHU/$NAME" "$UPPER_CHU/$NAME" 2>/dev/null || true
 fi

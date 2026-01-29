@@ -40,8 +40,8 @@ if command -v chcon >/dev/null 2>&1 && [ -f "$LOWER_CHU/$NAME" ]; then
 fi
 
 # 检查是否已挂载
-if awk -v mp="$TARGET_DIR" '$2==mp {found=1} END{exit !found}' /proc/mounts; then
-  umount "$TARGET_DIR" 2>/dev/null || umount -l "$TARGET_DIR" 2>/dev/null || true
+if awk -v mp="$TARGET_CHU" '$2==mp {found=1} END{exit !found}' /proc/mounts; then
+  umount "$TARGET_CHU" 2>/dev/null || umount -l "$TARGET_CHU" 2>/dev/null || true
 fi
 
 # 挂载OverlayFS

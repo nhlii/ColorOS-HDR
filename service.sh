@@ -6,6 +6,7 @@ LOWER_CHU="/my_product/vendor/etc"     # 下层目录
 TARGET_CHU="$LOWER_CHU"    # 挂载点
 UPPER_CHU="$MODDIR/overlay/upper"  # 上层目录
 WORK_CHU="$MODDIR/overlay/work"  # 临时工作目录
+NAME="multimedia_display_feature_config.xml"  目标文件
 
 # 确保work环境
 mkdir -p "$UPPER_CHU" "$WORK_CHU"
